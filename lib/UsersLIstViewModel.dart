@@ -1,42 +1,40 @@
 import 'package:higgletaskapp/UserModel.dart';
 import 'package:stacked/stacked.dart';
 
-class UsersListViewModel extends BaseViewModel{
+class UsersListViewModel extends BaseViewModel {
+  UserModel _userModelGlobal;
 
- UserModel _userModelGlobal;
-UsersListViewModel({UserModel userModel}):_userModelGlobal = userModel;
+  UsersListViewModel({UserModel userModel}) : _userModelGlobal = userModel;
 
-
-  num get id{
+  num get id {
     return _userModelGlobal.id;
   }
 
-  String get firstName{
+  String get firstName {
     return _userModelGlobal.firstName;
   }
 
-  String get lastName{
+  String get lastName {
     return _userModelGlobal.lastName;
   }
 
-  String get avatar{
+  String get avatar {
     return _userModelGlobal.avatar;
   }
 
-
-  String get email{
+  String get email {
     return _userModelGlobal.email;
   }
 
-  bool get isSelected{
+  bool get isSelected {
     return _userModelGlobal.isSelected;
   }
 
-  select(){
+  select() {
     _userModelGlobal.isSelected = true;
   }
 
-  unSelect(){
+  unSelect() {
     _userModelGlobal.isSelected = false;
   }
 }

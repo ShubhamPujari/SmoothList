@@ -1,11 +1,18 @@
-class UserModel{
+class UserModel {
   num id;
   String email;
   String firstName;
   String lastName;
   String avatar;
   bool isSelected;
-  UserModel({this.id, this.email, this.firstName, this.lastName, this.avatar,this.isSelected = false});
+
+  UserModel(
+      {this.id,
+      this.email,
+      this.firstName,
+      this.lastName,
+      this.avatar,
+      this.isSelected = false});
 
   factory UserModel.fromJson(Map<String, dynamic> json) {
     return UserModel(
@@ -16,6 +23,4 @@ class UserModel{
       lastName: json['last_name'] as String,
     );
   }
-
 }
-
